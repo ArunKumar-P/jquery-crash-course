@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jQuery Crash Course | Selectors</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1>jQuery Crash Course - Events</h1>
+    </header>
+
+    <div id="container">
+        <h1>Mouse Events</h1>
+        <button id="btn1" class="btnClass1">Button 1</button>
+        <button id="btn2">Button 2</button>
+
+        <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ipsum id vitae mollitia voluptas officiis voluptates soluta consectetur nihil vel pariatur error aliquam nostrum similique voluptatum, rem qui adipisci accusantium commodi! Commodi iste a vero esse praesentium molestias perspiciatis nemo rem, velit vitae corporis deserunt, maiores adipisci. Maiores, vero cumque?</p>
+
+        <!-- <h1 id="coords"></h1> -->
+        <hr>
+
+        <form id="form">
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="name">
+            <br>
+
+            <label for="email">Email</label><br>
+            <input type="email" name="email" id="email">
+            <br>
+
+            <label for="gender">Gender</label><br>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            /*$('#btn1').click(function(){
+                alert('Button One Clicked');
+            });
+            $('#btn2').on('click',function(){
+                alert('Button Two Clicked in the On Function');
+                //Second method is supposed to save a few milliseconds
+            });
+
+            $('#btn1').on('click',function(){
+                //$('.para1').hide();
+                $('.para1').toggle();
+            });
+
+            $('#btn2').on('click',function(){
+                $('.para1').show();
+            });
+
+            $('#btn1').dblclick(function(){
+                $('.para1').toggle();
+            });
+
+            $('#btn1').hover(function(){
+                $('.para1').toggle();
+            });
+
+            $('#btn1').on('mouseenter',function(){
+                $('.para1').toggle();
+            });
+
+            $('#btn1').on('mouseleave',function(){
+                $('.para1').toggle();
+            });
+
+            $('#btn1').on('mousemove',function(){
+                $('.para1').toggle();
+            });
+
+            $('#btn1').on('mousedown',function(){
+                $('.para1').toggle();
+            });
+
+            $('#btn1').on('mouseup',function(){
+                $('.para1').toggle();
+            });
+
+            $('#btn1').click(function(e){
+                //console.log(e);
+                //console.log(e.currentTarget.id);
+                //alert(e.currentTarget.innerHTML);
+                //alert(e.currentTarget.outerHTML);
+                //alert(e.currentTarget.className);
+            });
+
+            $('#btn1').on('mousemove',function(e){
+                console.log('Coordinates: Y: '+e.clientY+' X: '+e.clientX);
+            });
+
+            $(document).on('mousemove',function(e){
+                //console.log('Coordinates: Y: '+e.clientY+' X: '+e.clientX);
+                $('#coords').html('Coordinates: Y: '+e.clientY+' X: '+e.clientX);
+            });
+            
+            $('input').focus(function(){
+                //alert('Focus');
+                //$('input#name').css('background','pink');
+                $(this).css('background','pink');
+            });
+
+            $('input').blur(function(){
+                $(this).css('background','white');
+            });
+
+            $('input').keyup(function(e){
+                console.log(e.target.value);
+            });
+
+            $('select#gender').change(function(e){
+                //alert('Changed');
+                alert(e.target.value);
+            });*/
+
+            $('#form').submit(function(e){
+                e.preventDefault();
+
+                var name = $('input#name').val();
+                console.log(name);
+            });
+        });
+    </script>
+</body>
+
+</html>
